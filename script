@@ -821,7 +821,7 @@ UICorner_35.Parent = CreditsTab
 
 -- Scripts:
 
-local function XLZARP_fake_script() -- C_Button.LocalScript 
+local function KRVOBY_fake_script() -- C_Button.LocalScript 
 	local script = Instance.new('LocalScript', C_Button)
 
 	-- Setze hier die Namen der Frames, die du ein- und ausblenden möchtest
@@ -865,8 +865,8 @@ local function XLZARP_fake_script() -- C_Button.LocalScript
 	textButton.MouseButton1Click:Connect(toggleFrames)
 	
 end
-coroutine.wrap(XLZARP_fake_script)()
-local function NMXGPR_fake_script() -- AutoKill.LocalScript 
+coroutine.wrap(KRVOBY_fake_script)()
+local function ODJH_fake_script() -- AutoKill.LocalScript 
 	local script = Instance.new('LocalScript', AutoKill)
 
 	local Players = game:GetService("Players")
@@ -956,16 +956,16 @@ local function NMXGPR_fake_script() -- AutoKill.LocalScript
 	addToWhitelistButton.MouseButton1Click:Connect(addToWhitelistCode)
 	removeFromWhitelistButton.MouseButton1Click:Connect(removeFromWhitelistCode)
 end
-coroutine.wrap(NMXGPR_fake_script)()
-local function AOZXKQN_fake_script() -- SpeedPunch.LocalScript 
+coroutine.wrap(ODJH_fake_script)()
+local function LFTG_fake_script() -- SpeedPunch.LocalScript 
 	local script = Instance.new('LocalScript', SpeedPunch)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("Players").LocalPlayer.Backpack.Punch:FindFirstChildOfClass("NumberValue").Value = 0.001
 	end)
 end
-coroutine.wrap(AOZXKQN_fake_script)()
-local function LZQSFUJ_fake_script() -- AutoPunch.LocalScript 
+coroutine.wrap(LFTG_fake_script)()
+local function INYIFT_fake_script() -- AutoPunch.LocalScript 
 	local script = Instance.new('LocalScript', AutoPunch)
 
 	local autopunch = true
@@ -998,21 +998,21 @@ local function LZQSFUJ_fake_script() -- AutoPunch.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LZQSFUJ_fake_script)()
-local function GWVOEUZ_fake_script() -- AutoKillPlayer.LocalScript 
+coroutine.wrap(INYIFT_fake_script)()
+local function AOQNOQ_fake_script() -- AutoKillPlayer.LocalScript 
 	local script = Instance.new('LocalScript', AutoKillPlayer)
 
 	local player = game.Players.LocalPlayer
 	
 	local function touchTargetHead()
-		local playerName = script.Parent.Parent.Target.Text  -- Ersetze "PlayerName" durch den tatsächlichen Spielername-String
+		local playerName = script.Parent.Parent.Target.Text
 		local targetPlayer = game.Players:FindFirstChild(playerName)
 	
-		if targetPlayer and targetPlayer.Character then
+		if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("Head") then
+			local targetHead = targetPlayer.Character.Head
 			local localLeftHand = player.Character and player.Character:FindFirstChild("LeftHand")
-			local targetHead = targetPlayer.Character:FindFirstChild("Head")
 	
-			if localLeftHand and targetHead then
+			if localLeftHand then
 				firetouchinterest(targetHead, localLeftHand, 0)
 				wait(0.01)
 				firetouchinterest(targetHead, localLeftHand, 1)
@@ -1054,20 +1054,20 @@ local function GWVOEUZ_fake_script() -- AutoKillPlayer.LocalScript
 	end
 	
 end
-coroutine.wrap(GWVOEUZ_fake_script)()
-local function ACIK_fake_script() -- WhitelistPlayer.LocalScript 
+coroutine.wrap(AOQNOQ_fake_script)()
+local function RELTUUJ_fake_script() -- WhitelistPlayer.LocalScript 
 	local script = Instance.new('LocalScript', WhitelistPlayer)
 
 	
 end
-coroutine.wrap(ACIK_fake_script)()
-local function YWIQTA_fake_script() -- UnWhitelistPlayer.LocalScript 
+coroutine.wrap(RELTUUJ_fake_script)()
+local function VURJKWU_fake_script() -- UnWhitelistPlayer.LocalScript 
 	local script = Instance.new('LocalScript', UnWhitelistPlayer)
 
 	
 end
-coroutine.wrap(YWIQTA_fake_script)()
-local function TWPL_fake_script() -- Target.LocalScript 
+coroutine.wrap(VURJKWU_fake_script)()
+local function OJNKWR_fake_script() -- Target.LocalScript 
 	local script = Instance.new('LocalScript', Target)
 
 	
@@ -1103,8 +1103,8 @@ local function TWPL_fake_script() -- Target.LocalScript
 		return Found 
 	end
 end
-coroutine.wrap(TWPL_fake_script)()
-local function LWZYST_fake_script() -- Targetting.LocalScript 
+coroutine.wrap(OJNKWR_fake_script)()
+local function OCIG_fake_script() -- Targetting.LocalScript 
 	local script = Instance.new('LocalScript', Targetting)
 
 	
@@ -1140,8 +1140,8 @@ local function LWZYST_fake_script() -- Targetting.LocalScript
 		return Found 
 	end
 end
-coroutine.wrap(LWZYST_fake_script)()
-local function QWAWCD_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(OCIG_fake_script)()
+local function CODBA_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 
 	while true do
@@ -1172,14 +1172,14 @@ local function QWAWCD_fake_script() -- TextLabel_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(QWAWCD_fake_script)()
-local function FKBN_fake_script() -- StopAutoKill.LocalScript 
+coroutine.wrap(CODBA_fake_script)()
+local function UMXAS_fake_script() -- StopAutoKill.LocalScript 
 	local script = Instance.new('LocalScript', StopAutoKill)
 
 	
 end
-coroutine.wrap(FKBN_fake_script)()
-local function VMJHXPR_fake_script() -- StopAutoKillPlayer.LocalScript 
+coroutine.wrap(UMXAS_fake_script)()
+local function XLDRZ_fake_script() -- StopAutoKillPlayer.LocalScript 
 	local script = Instance.new('LocalScript', StopAutoKillPlayer)
 
 	local singleautokilling = true
@@ -1188,8 +1188,8 @@ local function VMJHXPR_fake_script() -- StopAutoKillPlayer.LocalScript
 		local singleautokilling = false
 	end)
 end
-coroutine.wrap(VMJHXPR_fake_script)()
-local function HRSZ_fake_script() -- WalkSpeed.LocalScript 
+coroutine.wrap(XLDRZ_fake_script)()
+local function KIKOID_fake_script() -- WalkSpeed.LocalScript 
 	local script = Instance.new('LocalScript', WalkSpeed)
 
 	Plr = game.Players.LocalPlayer
@@ -1198,8 +1198,8 @@ local function HRSZ_fake_script() -- WalkSpeed.LocalScript
 		Plr.Character.Humanoid.WalkSpeed = 2500
 	end)
 end
-coroutine.wrap(HRSZ_fake_script)()
-local function JHEL_fake_script() -- WalkSpeed_2.LocalScript 
+coroutine.wrap(KIKOID_fake_script)()
+local function HJAD_fake_script() -- WalkSpeed_2.LocalScript 
 	local script = Instance.new('LocalScript', WalkSpeed_2)
 
 	Plr = game.Players.LocalPlayer
@@ -1208,48 +1208,48 @@ local function JHEL_fake_script() -- WalkSpeed_2.LocalScript
 		Plr.Character.Humanoid.WalkSpeed = 500
 	end)
 end
-coroutine.wrap(JHEL_fake_script)()
-local function OMWUBQ_fake_script() -- NightTime.LocalScript 
+coroutine.wrap(HJAD_fake_script)()
+local function IZYL_fake_script() -- NightTime.LocalScript 
 	local script = Instance.new('LocalScript', NightTime)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Lighting.ClockTime = 5
 	end)
 end
-coroutine.wrap(OMWUBQ_fake_script)()
-local function TPZWOE_fake_script() -- MorningTime.LocalScript 
+coroutine.wrap(IZYL_fake_script)()
+local function EYUPBUG_fake_script() -- MorningTime.LocalScript 
 	local script = Instance.new('LocalScript', MorningTime)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Lighting.ClockTime = 7
 	end)
 end
-coroutine.wrap(TPZWOE_fake_script)()
-local function WVYKPBE_fake_script() -- DayTime.LocalScript 
+coroutine.wrap(EYUPBUG_fake_script)()
+local function JFSQJS_fake_script() -- DayTime.LocalScript 
 	local script = Instance.new('LocalScript', DayTime)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Lighting.ClockTime = 8
 	end)
 end
-coroutine.wrap(WVYKPBE_fake_script)()
-local function CJOPC_fake_script() -- RemovePunchAnimation.LocalScript 
+coroutine.wrap(JFSQJS_fake_script)()
+local function NWBGSL_fake_script() -- RemovePunchAnimation.LocalScript 
 	local script = Instance.new('LocalScript', RemovePunchAnimation)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("Players").LocalPlayer.Backpack.Punch.RequiresHandle = true
 	end)
 end
-coroutine.wrap(CJOPC_fake_script)()
-local function QSNXIJY_fake_script() -- RecoverPunchAnimation.LocalScript 
+coroutine.wrap(NWBGSL_fake_script)()
+local function OMPPGWE_fake_script() -- RecoverPunchAnimation.LocalScript 
 	local script = Instance.new('LocalScript', RecoverPunchAnimation)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("Players").LocalPlayer.Backpack.Punch.RequiresHandle = false
 	end)
 end
-coroutine.wrap(QSNXIJY_fake_script)()
-local function RGJNQG_fake_script() -- LockClientPosition.LocalScript 
+coroutine.wrap(OMPPGWE_fake_script)()
+local function RXCSJ_fake_script() -- LockClientPosition.LocalScript 
 	local script = Instance.new('LocalScript', LockClientPosition)
 
 	-- Zugriff auf den LocalPlayer
@@ -1298,14 +1298,14 @@ local function RGJNQG_fake_script() -- LockClientPosition.LocalScript
 		warn("LocalPlayer was not found.")
 	end
 end
-coroutine.wrap(RGJNQG_fake_script)()
-local function DVII_fake_script() -- UnLockClientPosition.LocalScript 
+coroutine.wrap(RXCSJ_fake_script)()
+local function MPIVOBC_fake_script() -- UnLockClientPosition.LocalScript 
 	local script = Instance.new('LocalScript', UnLockClientPosition)
 
 	
 end
-coroutine.wrap(DVII_fake_script)()
-local function YZHOBP_fake_script() -- Frame.ToggleGUI 
+coroutine.wrap(MPIVOBC_fake_script)()
+local function NOYHYLJ_fake_script() -- Frame.ToggleGUI 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -1320,8 +1320,8 @@ local function YZHOBP_fake_script() -- Frame.ToggleGUI
 		end
 	end)
 end
-coroutine.wrap(YZHOBP_fake_script)()
-local function LZALAJY_fake_script() -- RBFrame.LocalScript 
+coroutine.wrap(NOYHYLJ_fake_script)()
+local function QYPJH_fake_script() -- RBFrame.LocalScript 
 	local script = Instance.new('LocalScript', RBFrame)
 
 	while true do
@@ -1352,8 +1352,8 @@ local function LZALAJY_fake_script() -- RBFrame.LocalScript
 		end
 	end
 end
-coroutine.wrap(LZALAJY_fake_script)()
-local function GNZTY_fake_script() -- Frame.DisableTrading 
+coroutine.wrap(QYPJH_fake_script)()
+local function ZVCUK_fake_script() -- Frame.DisableTrading 
 	local script = Instance.new('LocalScript', Frame)
 
 	local args = {
@@ -1363,8 +1363,8 @@ local function GNZTY_fake_script() -- Frame.DisableTrading
 	game:GetService("ReplicatedStorage").rEvents.tradingEvent:FireServer(unpack(args))
 	
 end
-coroutine.wrap(GNZTY_fake_script)()
-local function SBHA_fake_script() -- Frame.WalkOnWater 
+coroutine.wrap(ZVCUK_fake_script)()
+local function QVSHMEB_fake_script() -- Frame.WalkOnWater 
 	local script = Instance.new('LocalScript', Frame)
 
 	local platformSize = Vector3.new(2048, 0, 2048)
@@ -1384,8 +1384,8 @@ local function SBHA_fake_script() -- Frame.WalkOnWater
 		end
 	end
 end
-coroutine.wrap(SBHA_fake_script)()
-local function KAZH_fake_script() -- KillingTab.LocalScript 
+coroutine.wrap(QVSHMEB_fake_script)()
+local function QAKWMU_fake_script() -- KillingTab.LocalScript 
 	local script = Instance.new('LocalScript', KillingTab)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1395,8 +1395,8 @@ local function KAZH_fake_script() -- KillingTab.LocalScript
 		script.Parent.Parent.CreditsFrame.Visible = false
 	end)
 end
-coroutine.wrap(KAZH_fake_script)()
-local function POHB_fake_script() -- TrainTab.LocalScript 
+coroutine.wrap(QAKWMU_fake_script)()
+local function BBHFORY_fake_script() -- TrainTab.LocalScript 
 	local script = Instance.new('LocalScript', TrainTab)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1405,8 +1405,8 @@ local function POHB_fake_script() -- TrainTab.LocalScript
 		script.Parent.Parent.ClientFrame.Visible = false
 	end)
 end
-coroutine.wrap(POHB_fake_script)()
-local function ONNRRV_fake_script() -- ClientTab.LocalScript 
+coroutine.wrap(BBHFORY_fake_script)()
+local function GHCH_fake_script() -- ClientTab.LocalScript 
 	local script = Instance.new('LocalScript', ClientTab)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1415,8 +1415,8 @@ local function ONNRRV_fake_script() -- ClientTab.LocalScript
 		script.Parent.Parent.CreditsFrame.Visible = false
 	end)
 end
-coroutine.wrap(ONNRRV_fake_script)()
-local function LFXDHO_fake_script() -- AutoWeight.LocalScript 
+coroutine.wrap(GHCH_fake_script)()
+local function NTELJSE_fake_script() -- AutoWeight.LocalScript 
 	local script = Instance.new('LocalScript', AutoWeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1431,8 +1431,8 @@ local function LFXDHO_fake_script() -- AutoWeight.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LFXDHO_fake_script)()
-local function EGDG_fake_script() -- AutoPushups.LocalScript 
+coroutine.wrap(NTELJSE_fake_script)()
+local function DZPIQ_fake_script() -- AutoPushups.LocalScript 
 	local script = Instance.new('LocalScript', AutoPushups)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1447,16 +1447,16 @@ local function EGDG_fake_script() -- AutoPushups.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EGDG_fake_script)()
-local function CHIXGTI_fake_script() -- FastWeight.LocalScript 
+coroutine.wrap(DZPIQ_fake_script)()
+local function CARODFT_fake_script() -- FastWeight.LocalScript 
 	local script = Instance.new('LocalScript', FastWeight)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("Players").LocalPlayer.Backpack.Weight:FindFirstChildOfClass("NumberValue").Value = 0
 	end)
 end
-coroutine.wrap(CHIXGTI_fake_script)()
-local function DCXKDCW_fake_script() -- TextLabel_7.LocalScript 
+coroutine.wrap(CARODFT_fake_script)()
+local function CSCNOE_fake_script() -- TextLabel_7.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_7)
 
 	while true do
@@ -1487,8 +1487,8 @@ local function DCXKDCW_fake_script() -- TextLabel_7.LocalScript
 		end
 	end
 end
-coroutine.wrap(DCXKDCW_fake_script)()
-local function DYURNW_fake_script() -- AutoPunchGreenRock.LocalScript 
+coroutine.wrap(CSCNOE_fake_script)()
+local function JRDABLE_fake_script() -- AutoPunchGreenRock.LocalScript 
 	local script = Instance.new('LocalScript', AutoPunchGreenRock)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1499,8 +1499,8 @@ local function DYURNW_fake_script() -- AutoPunchGreenRock.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DYURNW_fake_script)()
-local function FTKR_fake_script() -- AutoPunchWhiteRock.LocalScript 
+coroutine.wrap(JRDABLE_fake_script)()
+local function GDQW_fake_script() -- AutoPunchWhiteRock.LocalScript 
 	local script = Instance.new('LocalScript', AutoPunchWhiteRock)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1511,8 +1511,8 @@ local function FTKR_fake_script() -- AutoPunchWhiteRock.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FTKR_fake_script)()
-local function TFCGI_fake_script() -- AutoPunchInfernoRock.LocalScript 
+coroutine.wrap(GDQW_fake_script)()
+local function VZOFJIO_fake_script() -- AutoPunchInfernoRock.LocalScript 
 	local script = Instance.new('LocalScript', AutoPunchInfernoRock)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1523,8 +1523,8 @@ local function TFCGI_fake_script() -- AutoPunchInfernoRock.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TFCGI_fake_script)()
-local function HBGYOFT_fake_script() -- AutoPunchMythicalRock.LocalScript 
+coroutine.wrap(VZOFJIO_fake_script)()
+local function YQLSPA_fake_script() -- AutoPunchMythicalRock.LocalScript 
 	local script = Instance.new('LocalScript', AutoPunchMythicalRock)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1535,8 +1535,8 @@ local function HBGYOFT_fake_script() -- AutoPunchMythicalRock.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HBGYOFT_fake_script)()
-local function OFKVG_fake_script() -- CreditsLabel.LocalScript 
+coroutine.wrap(YQLSPA_fake_script)()
+local function RVSMXML_fake_script() -- CreditsLabel.LocalScript 
 	local script = Instance.new('LocalScript', CreditsLabel)
 
 	while true do
@@ -1567,8 +1567,8 @@ local function OFKVG_fake_script() -- CreditsLabel.LocalScript
 		end
 	end
 end
-coroutine.wrap(OFKVG_fake_script)()
-local function DDMJMS_fake_script() -- CreditsLabel_2.LocalScript 
+coroutine.wrap(RVSMXML_fake_script)()
+local function YVTOLW_fake_script() -- CreditsLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', CreditsLabel_2)
 
 	while true do
@@ -1599,8 +1599,8 @@ local function DDMJMS_fake_script() -- CreditsLabel_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(DDMJMS_fake_script)()
-local function WQBP_fake_script() -- CreditsLabel_3.LocalScript 
+coroutine.wrap(YVTOLW_fake_script)()
+local function PWUVNX_fake_script() -- CreditsLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', CreditsLabel_3)
 
 	while true do
@@ -1631,8 +1631,8 @@ local function WQBP_fake_script() -- CreditsLabel_3.LocalScript
 		end
 	end
 end
-coroutine.wrap(WQBP_fake_script)()
-local function DHVDUN_fake_script() -- CreditsLabel_4.LocalScript 
+coroutine.wrap(PWUVNX_fake_script)()
+local function WYMGOZ_fake_script() -- CreditsLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', CreditsLabel_4)
 
 	while true do
@@ -1663,8 +1663,8 @@ local function DHVDUN_fake_script() -- CreditsLabel_4.LocalScript
 		end
 	end
 end
-coroutine.wrap(DHVDUN_fake_script)()
-local function QOBC_fake_script() -- CreditsLabel_5.LocalScript 
+coroutine.wrap(WYMGOZ_fake_script)()
+local function HKMR_fake_script() -- CreditsLabel_5.LocalScript 
 	local script = Instance.new('LocalScript', CreditsLabel_5)
 
 	while true do
@@ -1695,8 +1695,8 @@ local function QOBC_fake_script() -- CreditsLabel_5.LocalScript
 		end
 	end
 end
-coroutine.wrap(QOBC_fake_script)()
-local function OLLK_fake_script() -- CreditsLabel_6.LocalScript 
+coroutine.wrap(HKMR_fake_script)()
+local function FNJC_fake_script() -- CreditsLabel_6.LocalScript 
 	local script = Instance.new('LocalScript', CreditsLabel_6)
 
 	while true do
@@ -1727,8 +1727,8 @@ local function OLLK_fake_script() -- CreditsLabel_6.LocalScript
 		end
 	end
 end
-coroutine.wrap(OLLK_fake_script)()
-local function EHJFYG_fake_script() -- CreditsTab.LocalScript 
+coroutine.wrap(FNJC_fake_script)()
+local function QVYIJKA_fake_script() -- CreditsTab.LocalScript 
 	local script = Instance.new('LocalScript', CreditsTab)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1737,4 +1737,4 @@ local function EHJFYG_fake_script() -- CreditsTab.LocalScript
 		script.Parent.Parent.ClientFrame.Visible = false
 	end)
 end
-coroutine.wrap(EHJFYG_fake_script)()
+coroutine.wrap(QVYIJKA_fake_script)()
